@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><title>Rock Paper Scissors</title>
+  <script type="text/javascript"></script>
+  </head>
+
+  <body>    
+		<h1>Let's Play Rock Paper Scissors!</h1>
+
+	
+
+
+<input type="text" id="fname" onkeyup="myFunction1()">
+
+
+
+
+<p>You picked: <span id="demo"></span></p>
+
+<button onclick="compPick()">Try it</button>
+
+
+<p>Computer picked: <span id="comp"></span></p>
+
+<script>
+
+function userPick() {
+    var x = document.getElementById("fname").value;
+    document.getElementById("demo").innerHTML = x;
+}
+
+
+    var options = ["rock", "paper", "scissors"];
+    function compPick() {
+        var chosenOne = Math.floor(Math.random(options) * 3);
+        document.getElementById("comp").innerHTML = options[chosenOne];
+    }
+
+</script>
+
+
+
+
+
+  </body>
+</html>
